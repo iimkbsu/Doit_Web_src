@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>박스모델</title>
+    <style>
+        div{
+            margin-bottom: 20px;
+        }
+        .box1{
+            border: 10px solid #ccc; /*패딩 경계*/
+            width: 200px; /*컨텐츠 자체 폭*/
+            height: 100px;  /*컨텐츠 자체 높이*/
+            padding: 20px;  /*컨텐츠 둘러싼 패딩 넓이*/
+            
+        }
+
+        .box2{
+            box-sizing: border-box; /*보더박스까지 포함하여 width height 계산가능*/
+            width: 200px;
+            height: 100px;
+            padding: 20px;
+            border: 10px solid #00f;
+        }
+        .box3{
+            border-width: 10px 7px 5px 3px;
+            border-style: dotted;
+            box-sizing: border-box;
+            width: 200px;
+            height: 100px;
+        }
+        .box4{
+
+            box-sizing: border-box;
+            padding: 100px;
+            margin: 50px;
+            border-top: 10px dotted red;
+            border-bottom: 5px solid blue;
+            border-right: 6px dashed green;
+            border-left: 10px double yellow;
+
+            width: 200px;
+            height: 100px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box1"></div>
+    <div class="box2"></div>
+    <div class="box3"></div>
+    <div class="box4"></div>
+    
+</body>
+</html>
