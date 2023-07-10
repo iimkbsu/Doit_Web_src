@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>선형 그라데이션</title>
+   <style>
+      div {
+         width: 500px;
+         height: 300px;
+         border: 1px solid #222;
+         margin: 30px;
+      }
+      
+      /* 타원형 그라데이션*/
+      .grad1 {
+         background: radial-gradient(red, white, blue);
+
+      }
+
+      /* 원형 그라데이션*/
+      .grad2 {
+         background: radial-gradient(circle 100px at 20% 20%, red, white, blue);
+      }
+
+      .grad3 {
+         background: radial-gradient(circle farthest-side at 30% 30%, red, white, green);
+      }
+     
+   </style>
+</head>
+<body>
+   <div class="grad1"></div>
+   <div class="grad2"></div>
+   <div class="grad3"></div>
+   
+</body>
+</html>
