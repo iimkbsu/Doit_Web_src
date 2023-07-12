@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+   <meta charset="UTF-8">
+   <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+   <title>가상 요소</title>
+   <style>
+      
+      li.new::after {
+         content: "NEW!!";
+         font-size: x-small;
+         background-color: red;
+         padding: 2px 4px;
+         margin: 0 10px;
+         border-radius: 2px;
+         color: white;
+      }
+   </style>
+</head>
+
+<body>
+   <div class="container">
+      <h1>제품 목록</h1>
+      <ul>
+         <li class="new">제품 A</li>
+         <li>제품 B</li>
+         <li>제품 C</li>
+         <li class="new">제품 D</li>
+      </ul>
+   </div>
+
+</body>
+
+</html>
