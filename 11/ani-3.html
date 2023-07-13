@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+   <meta charset="UTF-8">
+   <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+   <title>Animation</title>
+   <style>
+      .anime {
+         width: 100px;
+         height: 100px;
+         margin: 50px auto;
+         animation: rotate infinite 0.5s ease-in-out, background 0.5s infinite alternate-reverse;
+      }
+
+      .anime1 {
+         width: 100px;
+         height: 100px;
+         margin: 50px auto;
+         animation: rotate infinite 0.5s ease-in-out alternate, background 0.4s infinite alternate;
+      }
+
+      .anime2 {
+         width: 100px;
+         height: 100px;
+         margin: 50px auto;
+         animation: rotate infinite 0.5s ease-in-out alternate-reverse, background 0.3s infinite;
+      }
+
+      .anime3 {
+         width: 100px;
+         height: 100px;
+         margin: 50px auto;
+         animation: persp infinite 10s ease-in-out alternate-reverse, background 4s linear infinite;
+      }
+
+      @keyframes rotate {
+         from {
+            transform: perspective(120px) rotateX(0deg) rotatey(0deg);
+         }
+         50% {
+            transform: perspective(120px) rotateX(-180deg) rotatey(0deg);
+         }
+         to {
+            transform:perspective(120px) rotatex(-180deg) rotateY(-180deg);
+         }
+      }
+      
+      @keyframes background {
+         from {
+            background-color: red;
+         }
+         50% {
+            background-color: green;
+         }
+         to {
+            background-color: blue;
+         }
+      }
+
+      @keyframes persp {
+         from {
+            transform: perspective(80px) rotateX(0deg) rotatey(0deg) rotateZ(0deg);
+         }
+         50% {
+            transform: perspective(80px) rotateX(-180deg) rotatey(0deg) rotateZ(-180deg);
+         }
+         to {
+            transform:perspective(80px) rotatex(-180deg) rotateY(-180deg) rotateZ(180deg);
+         }
+      }
+
+   </style>
+</head>
+<body>
+   <div class="anime"></div>
+   <div class="anime1"></div>
+   <div class="anime2"></div>
+   <div class="anime3"></div>
+
+</body>
+</html>
