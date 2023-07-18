@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>나이 계산하기</title>
+</head>
+<body>
+   <script>
+      while(true) {
+
+         var yYear = prompt("태어난 년도를 입력하세요");
+
+         if(yYear < 1900) {
+         alert("1901년도 부터 입력 가능합니다")
+         }else if (yYear == null) {
+            alert("입력을 취소하였습니다");
+            break;
+         }else {
+            var cDate = new Date();
+            var cYear = cDate.getFullYear();
+            var yAge = cYear - yYear + 1;
+            document.write("당신의 나이 : ", yAge);
+            break;
+         }
+      }
+      
+   </script>
+   
+</body>
+</html>

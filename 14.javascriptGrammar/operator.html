@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>연산자</title>
+</head>
+<body>
+   <script>
+      var a = 2 + 3;
+      window.document.write(a, "<br>");
+      window.document.write(2+3, "<br>");
+      window.document.write(2/3, "<br>");
+      window.document.write(3%2, "<br>");
+
+      window.document.write("--------------------------------------------<br>");
+
+      var sum = 0;
+      var mult = 1;
+      for(var i=1; i<=100; i++){
+         sum += i;
+         mult *= i;
+      }
+      window.document.write(sum, "<br>", mult, "<br>");
+      window.document.write(sum + "<br>" + mult + "<br>");
+
+      window.document.write("--------------------------------------------<br>");
+
+      window.document.write(10 + "<br>");
+      window.document.write(10 + 10 + "<br>");
+      window.document.write(10 + "10" + "<br>");
+      window.document.write(10 + "10<br>");
+      window.document.write("10" + 10 + "<br>");
+
+      window.document.write("--------------------------------------------<br>");
+      window.document.write(10 - 10 + "<br>");
+      window.document.write("10" - 10 + "<br>");
+      window.document.write(10 - "10" + "<br>");
+      window.document.write("10" - "10" + "<br>");
+      
+      window.document.write("--------------------------------------------<br>");
+
+      var ans;
+      ans = (3 == "3");
+      window.document.write(ans + "<br>");
+      //true
+
+      ans = (3 == 3);
+      window.document.write(ans + "<br>");
+      //true
+
+      ans = (3 === 3);
+      window.document.write(ans + "<br>");
+      //true
+
+      ans = (3 === "3");
+      window.document.write(ans + "<br>");
+      //false
+
+      window.document.write("--------------------------------------------<br>");
+
+      ans = (3 != "3");
+      window.document.write(ans + "<br>");
+      //false
+
+      ans = (3 != 3);
+      window.document.write(ans + "<br>");
+      //false
+
+      ans = (3 !== 3);
+      window.document.write(ans + "<br>");
+      //false
+
+      ans = (3 !== "3");
+      window.document.write(ans + "<br>");
+      //true
+   </script>
+   
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>자료형</title>
+
+   <style>
+      body {
+         text-align: center;
+      }
+   </style>
+</head>
+<body>
+   <script>
+
+      var type = typeof("문자열");
+      document.write("문자열의 자료형 : " + type + "<br><br>");
+
+      type = typeof(1234);
+      document.write("1234의 자료형 : " + type  + "<br><br>");
+
+      type = typeof(1 > 10);
+      document.write("1 > 10의 자료형 : " + type  + "<br><br>");
+
+      var array = [1,2,3,4];
+
+      type = typeof(array);
+      document.write("[1,2,3,4]의 자료형 : " + type  + "<br><br>");
+
+      type = typeof(array[1]);
+      document.write("[1,2,3,4]에서 첫 번째의 자료형 : " + type  + "<br><br>");
+
+      type = typeof(new Date());
+      document.write("new Date()의 자료형 : " + type  + "<br><br>");
+      
+      type = typeof(null);
+      document.write("null의 자료형 : " + type  + "<br><br>");
+
+      var undef;
+      type = typeof(undef);
+      document.write("값이 없는 변수의 자료형 : " + type  + "<br><br>");
+
+   </script>
+</body>
+</html>
