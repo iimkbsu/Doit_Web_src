@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>함수</title>
+</head>
+
+<body>
+   <script>
+      (() => {
+         var userName = prompt("이름을 입력하세요");
+         document.write("안녕하세요?" + userName + "님 <br>");
+      })();
+
+      (function () {
+         var userName = prompt("이름을 입력하세요");
+         document.write("안녕하세요?" + userName + "님<br>");
+      })();
+
+      (function () {
+         var userName = prompt("이름을 입력하세요");
+         document.write("안녕하세요?" + userName + "님<br>");
+      }());
+   </script>
+
+   <script>
+      var hello = function(){
+         document.write("Hello world");
+      };
+
+      hello();
+
+      var sum = function(a, b) {
+         return a+b;
+      };
+      document.write(sum(10,20));
+   </script>
+</body>
+
+</html>

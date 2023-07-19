@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>자바스크립트 이벤트</title>
+   <link rel="stylesheet" href="css/function.css">
+
+   <style>
+   </style>
+</head>
+
+<body>
+
+
+   <button id="change1" onclick="changeColor1()">글자색 바꾸기</button>
+   <p id="p1">Reprehenderit tempor do quis sunt eu et exercitation deserunt. Laboris adipisicing est sint aliquip nulla
+      pariatur velit irure elit qui id. Dolore aliquip dolore eu ut irure sint Lorem reprehenderit velit. Duis veniam
+      irure cillum anim excepteur culpa pariatur sunt esse. Eu nulla commodo velit ex id dolore incididunt mollit
+      incididunt nisi labore culpa qui ea. Commodo veniam veniam in ipsum ad minim occaecat qui pariatur adipisicing
+      laborum quis.</p>
+
+   <button id="change2">글자색 바꾸기</button>
+   <p id="p2">Reprehenderit tempor do quis sunt eu et exercitation deserunt. Laboris adipisicing est sint aliquip nulla
+      pariatur velit irure elit qui id. Dolore aliquip dolore eu ut irure sint Lorem reprehenderit velit. Duis veniam
+      irure cillum anim excepteur culpa pariatur sunt esse. Eu nulla commodo velit ex id dolore incididunt mollit
+      incididunt nisi labore culpa qui ea. Commodo veniam veniam in ipsum ad minim occaecat qui pariatur adipisicing
+      laborum quis.</p>
+
+   <button id="change3">글자색 바꾸기</button>
+   <p id="p3">Reprehenderit tempor do quis sunt eu et exercitation deserunt. Laboris adipisicing est sint aliquip nulla
+      pariatur velit irure elit qui id. Dolore aliquip dolore eu ut irure sint Lorem reprehenderit velit. Duis veniam
+      irure cillum anim excepteur culpa pariatur sunt esse. Eu nulla commodo velit ex id dolore incididunt mollit
+      incididunt nisi labore culpa qui ea. Commodo veniam veniam in ipsum ad minim occaecat qui pariatur adipisicing
+      laborum quis.</p>
+
+   <button id="change4">글자색 바꾸기</button>
+   <p id="p4">Reprehenderit tempor do quis sunt eu et exercitation deserunt. Laboris adipisicing est sint aliquip nulla
+      pariatur velit irure elit qui id. Dolore aliquip dolore eu ut irure sint Lorem reprehenderit velit. Duis veniam
+      irure cillum anim excepteur culpa pariatur sunt esse. Eu nulla commodo velit ex id dolore incididunt mollit
+      incididunt nisi labore culpa qui ea. Commodo veniam veniam in ipsum ad minim occaecat qui pariatur adipisicing
+      laborum quis.</p>
+
+      <button id="change5">글자색 바꾸기</button>
+   <p id="p5">Reprehenderit tempor do quis sunt eu et exercitation deserunt. Laboris adipisicing est sint aliquip nulla
+      pariatur velit irure elit qui id. Dolore aliquip dolore eu ut irure sint Lorem reprehenderit velit. Duis veniam
+      irure cillum anim excepteur culpa pariatur sunt esse. Eu nulla commodo velit ex id dolore incididunt mollit
+      incididunt nisi labore culpa qui ea. Commodo veniam veniam in ipsum ad minim occaecat qui pariatur adipisicing
+      laborum quis.</p>
+
+   <script>
+
+      //HTML로 함수 사용하는 방법
+      function changeColor1() {
+         document.querySelector("#p1").style.color = "#f00";
+         alert("글자색을 바꿉니다");
+      }
+
+      //JS에서 함수 자체적으로 사용 (DOM) 방법1
+      var changeBttn = document.querySelector("#change2");
+      changeBttn.onclick = changeColor2;
+
+      function changeColor2() {
+         document.querySelector("#p2").style.color = "#ff0";
+         alert("글자색을 바꿉니다");
+      }
+
+      //JS에서 함수 자체적으로 사용 (DOM) 방법2
+      var changeBttn2 = document.querySelector("#change3").onclick = changeColor3;
+      function changeColor3() {
+         document.querySelector("#p3").style.color = "#00f";
+         alert("글자색을 바꿉니다");
+      }
+
+      
+
+
+      //JS에서 함수 자체적으로 사용 (DOM) 방법3
+      var changeBttn3 = document.querySelector("#change4");
+
+      changeBttn3.onclick = function () {
+         document.querySelector("#p4").style.color = "#0f0";
+         alert("글자색을 바꿉니다");
+      };
+
+      //JS에서 함수 자체적으로 사용 (DOM) 방법4
+      document.querySelector("#change5").onclick = () => {
+         document.querySelector("#p5").style.color = "#0ff";
+         alert("글자색을 바꿉니다");
+      };
+
+
+
+
+
+
+   </script>
+</body>
+
+</html>

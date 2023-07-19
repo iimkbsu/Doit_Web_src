@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>함수</title>
+</head>
+
+<body>
+   <script>
+     var input1 = prompt("숫자를입력하세요");
+     var input2 =  prompt("숫자를입력하세요");
+     var num1 = parseInt(input1);
+     var num2 = parseInt(input2);
+     ((n1, n2)=> {
+      var sum = num1 + num2;
+      alert("두 수의 더하기 : " + sum);
+     })(num1, num2);
+
+   </script>
+
+   <script>
+      var nm1 = prompt("숫자 입력하세요");
+      var nm2 = prompt("숫자를 입력하세요");
+
+      (function(a, b) {
+         sum = parseInt(a) + parseInt(b);
+         alert("두 수의 더하기 : " + sum);
+      })(nm1, nm2);
+
+      (function(a,b) {
+         sum = parseInt(a) + parseInt(b);
+         alert("두 수의 더하기 : " + sum);
+      }(nm1, nm2));
+   </script>
+</body>
+
+</html>
