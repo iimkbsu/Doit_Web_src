@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>퀴즈1</title>
+   <style>
+      #container {
+         text-align: center;
+         border: 1px solid #222;
+         margin: 20px auto;
+         width: 500px;
+         height: 200px;
+      }
+      span[id *="clock"] {
+         font-size: 40px;
+         color: blue;
+      }
+   </style>
+</head>
+<body>
+   <div id="container">
+      <h2>현재 시각 <span id="clock"></span></h2>
+      <h2>현재 시각 <span id="clock_2"></span></h2>
+      <!-- <button id="closeBttn" onclick="javascript:window.close();">닫기</button> -->
+      <button id="closeBttn">닫기</button>
+   </div>
+   <script>
+
+      setInterval(displayNow, 100);
+
+      function displayNow() {
+         var date = new Date();
+         let $hr = date.getHours();
+         let $min = date.getMinutes();
+         let $sec = date.getSeconds();
+         let $mils = date.getMilliseconds();
+
+         var currentTime;
+
+         if($hr > 12) {
+            $hr = $hr - 12;
+            if($min < 9) {
+               if($sec < 9) {
+                  currentTime = "오후 " + $hr + ":0" + $min + ":0" + $sec + ":" + $mils;
+               }else {
+                  currentTime = "오후 " + $hr + ":0" + $min + ":" + $sec + ":" + $mils;
+               }
+            }else {
+               if($sec < 9) {
+                  currentTime = "오후 " + $hr + ":" + $min + ":0" + $sec + ":" + $mils;
+               }else {
+                  currentTime = "오후 " + $hr + ":" + $min + ":" + $sec + ":" + $mils;
+               }
+            }
+         }else {
+            if($min < 9) {
+               if($sec < 9) {
+                  currentTime = "오전 " + $hr + ":0" + $min + ":0" + $sec + ":" + $mils;
+               }else {
+                  currentTime = "오전 " + $hr + ":0" + $min + ":" + $sec + ":" + $mils;
+               }
+            }else {
+               if($sec < 9) {
+                  currentTime = "오전 " + $hr + ":" + $min + ":0" + $sec + ":" + $mils;
+               }else {
+                  currentTime = "오전 " + $hr + ":" + $min + ":" + $sec + ":" + $mils;
+               }
+            }
+         }
+
+         document.querySelector("#clock").innerHTML = currentTime;
+
+
+         //위 코드를 한 줄로 쓸 수 있다 toLocalTimeString();
+         currentTime = date.toLocaleTimeString();
+         document.querySelector("#clock_2").innerHTML = currentTime + ":" + $mils;
+      }
+
+      
+      function closeWindow() {
+         window.close();
+      }
+
+      document.getElementById("closeBttn").onclick = closeWindow;
+
+   </script>   
+</body>
+</html>
