@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Dom event 객체</title>
+   <style>
+      #container {
+         width: 300px;
+         margin: 10px auto;
+      }
+   </style>
+</head>
+<body>
+   <div id="container">
+      <img src="images/cup-1.png" alt="컵1" id="cup">
+
+   </div>
+
+   <script>
+      var cup = document.querySelector("#cup");
+
+    
+      // cup.onclick = () =>{
+      //    alert("이미지를 클릭했습니다. 컵 색상이 변합니다");
+      //    cup.src = "images/cup-2.png";
+      // };
+
+      
+      //////////////////////////////
+      // cup.onclick = changePic;
+      
+      // function changePic() {
+      //    alert("이미지를 클릭햇씁니다. 컵 색상이 변합니다");
+      //    cup.src = "images/cup-2.png";
+      // }
+
+      ///////////////////////////////
+      // cup.onclick = function() {
+      //    alert("이미지를 클릭했습니다. 컵 색상이 변합니다");
+      //    cup.src = "images/cup-2.png";
+      // }
+
+
+      cup.onclick = function() {
+         alert("이미지를 클릭했습니다. 컵 색상이 변합니다");
+         this.src = "images/cup-2.png";
+      }
+
+      
+
+   </script>
+</body>
+</html>

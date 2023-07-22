@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>DOM event 객체</title>
+   <style>
+      #container {
+         width: 300px;
+         margin: 20px auto;
+      }
+   </style>
+</head>
+<body>
+   <div id="container">
+      <img src="images/easys-1.jpg" alt="여자" id="cover">
+   </div>
+
+   <script>
+
+      var cover = document.getElementById("cover");
+
+
+      //////////////////////////////////////
+      // cover.addEventListener("mouseover", changePic, false);
+      // cover.addEventListener("mouseout", originPic);
+
+      // function changePic() {
+      //    cover.src = "images/easys-2.jpg";
+      // }
+
+      // function originPic() {
+      //    cover.src = "images/easys-1.jpg";
+      // }
+
+
+      //////////////////람다함수, 익명함수/////////////////////
+      cover.addEventListener("mouseover", ()=>{
+         cover.src = "images/easys-2.jpg";
+      }, false);
+
+      cover.addEventListener("mouseout", function(){
+         cover.src = "images/easys-1.jpg";
+      }, false);
+
+
+   </script>
+</body>
+</html>
